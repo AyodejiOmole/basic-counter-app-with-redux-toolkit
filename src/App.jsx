@@ -14,9 +14,9 @@ function App() {
         <button onClick={() => dispatch(increment())}>+</button>
         <button onClick={() => dispatch(decrement())}>-</button>
 
-        <input value={value} onChange={setValue(target.value)}/>
-        <button onClick={}>Increase by amount</button>
-        <button onClick={}>Decrease by amount</button>
+        <input value={value} onChange={(event) => setValue(event.target.value)} type="number"/>
+        <button onClick={() => dispatch(changeByAmount({amount: value, type: "+"}))}>Increase by amount</button>
+        <button onClick={() => dispatch(changeByAmount({amount: value, type: "-"}))}>Decrease by amount</button>
       </div>
     </div>
   )
