@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { increment, decrement } from './app/counterSlice';
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [value, setValue] = useState(0);
   const dispatch = useDispatch();
   const currentCount = useSelector((state) => state.counter.value);
 
@@ -13,6 +13,9 @@ function App() {
         <p>{currentCount}</p>
         <button onClick={() => dispatch(increment())}>+</button>
         <button onClick={() => dispatch(decrement())}>-</button>
+
+        <input value={value} onChange={setValue(target.value)}/>
+        <button onClick={}>Increase by amount</button>
       </div>
     </div>
   )
