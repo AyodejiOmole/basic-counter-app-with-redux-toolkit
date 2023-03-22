@@ -21,11 +21,11 @@ const counterSlice = createSlice({
         changeByAmount: (state, action) => {
             const {amount, type} = action.payload;
             if(type === "+") {
-                state.value += amount;
+                state.value += Number(amount);
                 return
             } 
             if(type === "-") {
-                state.value += amount;
+                state.value -= Number(amount);
                 return
             }
         }
