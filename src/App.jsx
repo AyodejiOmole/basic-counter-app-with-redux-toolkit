@@ -5,7 +5,7 @@ import { increment, decrement } from './app/counterSlice';
 function App() {
   const [count, setCount] = useState(0);
   const dispatch = useDispatch();
-  const currentCount = useSelector(state => state.counter.count);
+  const currentCount = useSelector((state) => state.counter.value);
 
   return (
     <div className="App">
