@@ -25,6 +25,10 @@ const counterSlice = createSlice({
                 return
             } 
             if(type === "-") {
+                if(state.value < 1) {
+                    state.value = 0
+                    return;
+                }
                 state.value -= Number(amount);
                 return
             }
